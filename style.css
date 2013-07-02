@@ -1,0 +1,9 @@
+#write {
+	autofocus: autofocus;
+}
+
+#preview {
+	float: right;
+	width: 50%;
+	border: 1px red dotted;
+}
