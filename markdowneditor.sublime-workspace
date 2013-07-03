@@ -1,0 +1,1134 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ca",
+				"callMethod"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"te",
+				"textarea"
+			],
+			[
+				"tim",
+				"time_since_keyDown"
+			],
+			[
+				"re",
+				"replace"
+			],
+			[
+				"rea",
+				"replaceSelectedText"
+			],
+			[
+				"sele",
+				"selectedText"
+			],
+			[
+				"pro",
+				"projects"
+			],
+			[
+				"array_s",
+				"array_shift"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"pr",
+				"projects"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"cou",
+				"counter"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"inf",
+				"info_page"
+			],
+			[
+				"up",
+				"upload_config"
+			],
+			[
+				"bi",
+				"bigId"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"nav-a-",
+				"nav-a-info"
+			],
+			[
+				"nav-a",
+				"nav-a-projekte"
+			],
+			[
+				"nav",
+				"nav-a-index"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"stat",
+				"static"
+			],
+			[
+				"pk",
+				"PKGPATH"
+			],
+			[
+				"Do",
+				"DOCROOT"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"id",
+				"idSmallImg"
+			],
+			[
+				"Au",
+				"author  (variable)"
+			],
+			[
+				"num",
+				"numberOfCols"
+			],
+			[
+				"smallIm",
+				"smallImageList"
+			],
+			[
+				"Model",
+				"Model_Projectsimage"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"b",
+				"background"
+			],
+			[
+				"pa",
+				"pathBig  (variable)"
+			],
+			[
+				"key",
+				"key_to"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"array",
+				"array"
+			],
+			[
+				"find",
+				"find_by_title"
+			],
+			[
+				"Mode",
+				"Model_Site"
+			],
+			[
+				"ord",
+				"ordered"
+			],
+			[
+				"el",
+				"element"
+			],
+			[
+				"crea",
+				"created_at"
+			],
+			[
+				"M",
+				"Model_Site"
+			],
+			[
+				"vali",
+				"validate  (function)"
+			],
+			[
+				"to",
+				"toSave"
+			],
+			[
+				"preg_",
+				"preg_match"
+			],
+			[
+				"pat",
+				"pathSmall"
+			],
+			[
+				"path",
+				"pathBig"
+			],
+			[
+				"saved_",
+				"saved_as"
+			],
+			[
+				"u",
+				"uploadedImages"
+			],
+			[
+				"big",
+				"pathBig"
+			],
+			[
+				"project",
+				"projectsId"
+			],
+			[
+				"mt",
+				"mt_rand"
+			],
+			[
+				"add",
+				"addslashes"
+			],
+			[
+				"hea",
+				"header	Tag"
+			],
+			[
+				"im",
+				"image"
+			],
+			[
+				"post",
+				"post_id"
+			],
+			[
+				"tem",
+				"template"
+			],
+			[
+				"Contr",
+				"Controller_Admin"
+			],
+			[
+				"fcontroller",
+				"fcontroller	Controller_template"
+			],
+			[
+				"actio",
+				"action_view"
+			],
+			[
+				"exe",
+				"execute"
+			],
+			[
+				"fora",
+				"foreach	foreach …"
+			],
+			[
+				"end",
+				"endforeach  (keyword)"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "editor.js",
+			"settings":
+			{
+				"buffer_size": 2235,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "style.css",
+			"settings":
+			{
+				"buffer_size": 154,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 1906,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 136,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/JSLint/JSLint.sublime-build",
+	"command_palette":
+	{
+		"height": 267.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Set Syntax: PHP"
+			]
+		],
+		"width": 602.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/blog/template.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/blog/projekte.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/controller/admin/projects.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/model/news.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/model/project.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/blog/kontakt.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/blog/index.php",
+		"/Users/muma/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/a5/a5_aufgabe3_uml.xmi",
+		"/Users/muma/Documents/Nachhilfe/Henrika Erikson.txt",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/public/assets/css/style.css",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/controller/blog.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/controller/admin/info.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/blog/info.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/model/projectimage.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/template.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/controller/admin/news.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/projects/_form.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/news/_form.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/model/projectsimage.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/controller/projekte.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/projects/view.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/news/index.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/projects/index.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/sites/friends/create.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/sites/friends/edit.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/controller/admin/friends.php",
+		"/Applications/Slate.app/Contents/Resources/default.slate",
+		"/Applications/Slate.app/Contents/Resources/my.slate",
+		"/Applications/Utilities/Boot Camp Assistant.app/Contents/Info.plist",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/dashboard.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/model/friend.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/model/cvitem.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/model/info.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/sites/friend/edit.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/sites/friend/_form.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/controller/info.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/sites/cv/edit.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/sites/friend/create.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/sites/friend/index.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/sites/friend",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/sites/cv/index.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/controller/admin/cv.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/sites/cv/create.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/sites/cv/_form.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/controller/admin/cvitems.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/controller/adminhelper/friends.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/controller/adminhelper/cvitems.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/sites/info/edit.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/controller/adminhelper/cvitem.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/sites/info/_form.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/sites/info/view.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/sites/kontakt/_form.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/controller/kontakt.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/model/freund.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/model/cveintrag.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/public/index.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/model/kontakt.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/sites/kontakt/edit.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/controller/admin/kontakt.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/sites/kontakt/view.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/public/assets/js/script.js",
+		"/Users/muma/Developer/Web/Projects/LukasBaumgartner/configfile.txt",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/db.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/settings/.htaccess",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/public/.htaccess",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/settings/index.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/settings/db.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/startertemplate.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/model/vkontakt.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/config/config.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/config.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/model/sinfo",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/config/routes.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/controller/starter.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/controller/neu.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/starter-template.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/model/projectnewsimage.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/migrations/006_create_projectnewsimages.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/public/assets/css/index.html",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/migrations/005_create_news.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/migrations/002_create_projects.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/controller/admin/sites.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/news/view.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/news/edit.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/projects/edit.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/news/create.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/sites/index.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/sites/create.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/sites/edit.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/sites/view.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/core/classes/upload.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/controller/deleteprojectsimage.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/controller/DeleteProjectsImage.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/controller/projectsimage.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/blog/viewBlogProject.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/controller/admin.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/foo.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/packages/orm/classes/observer/createdat.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/model/deleteFile.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/admin/login.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/controller/welcome.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/welcome/hello.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/welcome/index.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/config/development/db.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/config/simpleauth.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/packages/auth/config/auth.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/config/auth.php",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/TESTING.md",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/README.md",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/oil",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/CONTRIBUTING.md",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/CHANGELOG.md",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/build.xml",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/core/classes/profiler.php",
+		"/Applications/MAMP/htdocs/FuelPlayground/.htaccess",
+		"/Applications/MAMP/htdocs/lukasBaumgartner/.htaccess",
+		"/Applications/MAMP/htdocs/FuelPlayground/fuel/app/views/admin/template.php",
+		"/Applications/MAMP/htdocs/FuelPlayground/fuel/app/classes/model/image.php",
+		"/Applications/MAMP/htdocs/FuelPlayground/fuel/app/classes/controller/admin/posts.php",
+		"/Applications/MAMP/htdocs/FuelPlayground/fuel/app/classes/model/riddle.php",
+		"/Applications/MAMP/htdocs/FuelPlayground/fuel/app/views/admin/posts/view.php",
+		"/Applications/MAMP/htdocs/FuelPlayground/fuel/app/views/blog/index.php",
+		"/Applications/MAMP/htdocs/FuelPlayground/fuel/app/views/admin/images/view.php",
+		"/Applications/MAMP/htdocs/FuelPlayground/fuel/app/views/admin/images/_form.php",
+		"/Applications/MAMP/htdocs/FuelPlayground/fuel/app/views/admin/posts/index.php",
+		"/Applications/MAMP/htdocs/FuelPlayground/fuel/app/views/admin/images/index.php",
+		"/Applications/MAMP/htdocs/FuelPlayground/fuel/app/classes/controller/admin/images.php",
+		"/Applications/MAMP/htdocs/FuelPlayground/fuel/app/classes/model/page.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes,/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"small",
+			"date",
+			"proje",
+			"project",
+			"info",
+			"$config",
+			"isdraft",
+			"projects_id",
+			"projectsId",
+			"projects_id",
+			"isdraft",
+			"pathBig",
+			"pathSmall",
+			"pathBig",
+			"sites/friend",
+			"$link",
+			"$news",
+			"Model_News",
+			"$news",
+			"$site",
+			"Model_Kontakt",
+			"$news",
+			"Model_News",
+			"nav",
+			"pro",
+			"content",
+			"projects",
+			"site",
+			"sites",
+			"Site",
+			"border",
+			"project",
+			"$project",
+			"$uploadedImages[$i]",
+			"delete",
+			"nav-",
+			"tren",
+			"groups",
+			"$post",
+			"admin/posts",
+			"super+b",
+			"$post",
+			"post",
+			"$post",
+			"post",
+			"Model_Post",
+			"post",
+			"riddle/"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"project_id",
+			"is_draft",
+			"path_big",
+			"path_small",
+			"path_big",
+			"sites/friends",
+			"$friend",
+			"Model_Friend",
+			"Model_Cvitem",
+			"$cvitem",
+			"$info_page",
+			"Model_Info",
+			"$site",
+			"Model_Kontakt",
+			"news",
+			"News",
+			"site",
+			"$site",
+			"$img",
+			"nav-a-",
+			"$image",
+			"admin/images",
+			"$page",
+			"page",
+			"$page",
+			"page",
+			"Model_Page",
+			"page",
+			"admin/riddles/",
+			"admin/riddles"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "editor.js",
+					"settings":
+					{
+						"buffer_size": 2235,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "style.css",
+					"settings":
+					{
+						"buffer_size": 154,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 1906,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "README.md",
+					"settings":
+					{
+						"buffer_size": 136,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 242.0,
+	"status_bar_visible": true
+}

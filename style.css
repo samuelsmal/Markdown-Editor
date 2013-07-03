@@ -1,9 +1,15 @@
+html, body {
+	height: 100%;
+}
+
 #write {
-	autofocus: autofocus;
+	width: 45%;
+	height: 50%;
 }
 
 #preview {
 	float: right;
-	width: 50%;
+	width: 45%;
+	min-height: 50%;
 	border: 1px red dotted;
 }
