@@ -82,40 +82,47 @@ Editor.prototype.doBlock = function() {
 	this.doHeaders();
 
 	var lines = this.src.split('\n'),
-		numberOfLines = lines.length,
-		currentLine = "",
-		openParagraph = false,
-		consecutiveNewLine = false,
+		numberOfLines,
 		structuredText = "";
 
-	for (var i = 0; i < numberOfLines; i++) {
-		currentLine = lines[i];
+	for (var i = 0, numberOfLines = lines.length; i < numberOfLines; ) {
 
-		if (i === 0 && !/<h[1-3]>/.test(currentLine)) {
-			structuredText += '<p>' + currentLine;
-			openParagraph = true;
-		} else if (/<h[1-3]>/.test(currentLine)) {
-			structuredText += currentLine;
-			consecutiveNewLine = false;
-		} else if (currentLine === '') {
-			consecutiveNewLine = true;
-		} else if (currentLine === '' && consecutiveNewLine) {
+		if (lines[i] === "") {
+			++i;
+		} else if (/^>/.test(lines[i])) {
+			// blockquote
+			structuredText += '<blockquote>';
+			while (i < numberOfLines && /^>/.test(lines[i])) {
+				structuredText += lines[i++].replace(/^>\s*/, '') + ' ';
+			}
+			structuredText += '</blockquote';
+
+		} else if (/^\d+[^\\]\./.test(lines[i])) {
+			// numbered list
+			structuredText += '<ul>';
+			while (i < numberOfLines && lines[i] !== "") {
+				structuredText += '<li>' + lines[i++] + '</li>';
+			}
+			structuredText += '</ul>';
+
+		} else if (!/<h[1-3]>/.test(lines[i])) {
+			// paragraphs
+			structuredText += '<p>';
+			while (i < numberOfLines && lines[i] !== "") {
+				structuredText += lines[i++];
+				if (i + 1 < numberOfLines && lines[i+1] !== "") {structuredText += " ";}
+			}
 			structuredText += '</p>';
-			openParagraph = false;
-		} else if (openParagraph) {
-			structuredText += currentLine;
 		} else {
-			structuredText += '<p>' + currentLine;
-			openParagraph = true;
+			// header
+			structuredText += lines[i++];
 		}
 	}
 
 	this.src = structuredText;
 };
 
-Editor.prototype.doParagraphs = function() {
-	this.src = this.src
-		.replace(/([\S\s]+?)\n\n/, '<p>$1</p>');
+Editor.prototype.doParagraphs = function(string) {
 };
 
 Editor.prototype.doHeaders = function() {

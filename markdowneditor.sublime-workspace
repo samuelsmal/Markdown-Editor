@@ -4,12 +4,48 @@
 		"selected_items":
 		[
 			[
-				"ca",
-				"callMethod"
+				"co",
+				"console"
+			],
+			[
+				"con",
+				"consecutiveNewLine"
+			],
+			[
+				"cont",
+				"continue  (keyword)"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"do",
+				"doHeaders  (function)"
+			],
+			[
+				"doBloc",
+				"doBlock"
+			],
+			[
+				"s",
+				"sourceField  (variable)"
+			],
+			[
+				"cre",
+				"Creator"
+			],
+			[
+				"p",
+				"parameters"
 			],
 			[
 				"fun",
-				"function"
+				"fun	Function"
+			],
+			[
+				"ca",
+				"callMethod"
 			],
 			[
 				"te",
@@ -38,10 +74,6 @@
 			[
 				"array_s",
 				"array_shift"
-			],
-			[
-				"for",
-				"foreach	foreach …"
 			],
 			[
 				"pr",
@@ -291,7 +323,7 @@
 			"file": "editor.js",
 			"settings":
 			{
-				"buffer_size": 2235,
+				"buffer_size": 3518,
 				"line_ending": "Unix"
 			}
 		},
@@ -307,7 +339,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 1906,
+				"buffer_size": 1866,
 				"line_ending": "Unix"
 			}
 		},
@@ -315,7 +347,7 @@
 			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 136,
+				"buffer_size": 224,
 				"line_ending": "Unix"
 			}
 		}
@@ -360,6 +392,7 @@
 	},
 	"file_history":
 	[
+		"/Users/muma/Developer/Web/Projects/Markdown Editor/creator.js",
 		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/blog/template.php",
 		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/views/blog/projekte.php",
 		"/Applications/MAMP/htdocs/lukasBaumgartner/fuel/app/classes/controller/admin/projects.php",
@@ -486,8 +519,7 @@
 		"/Applications/MAMP/htdocs/FuelPlayground/fuel/app/views/admin/images/_form.php",
 		"/Applications/MAMP/htdocs/FuelPlayground/fuel/app/views/admin/posts/index.php",
 		"/Applications/MAMP/htdocs/FuelPlayground/fuel/app/views/admin/images/index.php",
-		"/Applications/MAMP/htdocs/FuelPlayground/fuel/app/classes/controller/admin/images.php",
-		"/Applications/MAMP/htdocs/FuelPlayground/fuel/app/classes/model/page.php"
+		"/Applications/MAMP/htdocs/FuelPlayground/fuel/app/classes/controller/admin/images.php"
 	],
 	"find":
 	{
@@ -601,7 +633,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -609,15 +641,15 @@
 					"file": "editor.js",
 					"settings":
 					{
-						"buffer_size": 2235,
+						"buffer_size": 3518,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2467,
+								2467
 							]
 						],
 						"settings":
@@ -711,10 +743,11 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1037.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -839,15 +872,15 @@
 					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 1906,
+						"buffer_size": 1866,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								350,
+								350
 							]
 						],
 						"settings":
@@ -956,15 +989,15 @@
 					"file": "README.md",
 					"settings":
 					{
-						"buffer_size": 136,
+						"buffer_size": 224,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								224,
+								224
 							]
 						],
 						"settings":
