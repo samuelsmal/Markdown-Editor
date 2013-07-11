@@ -42,8 +42,8 @@ Editor.prototype.preprocessor = function() {
 		.replace(/\r\n|\r/g, '\n')
 		.replace(/\t/g, '    ')
 		.replace(/\u00a0/g, ' ')
-		.replace(/\u2424/g, '\n')
-		.replace(/^ +/, '');
+		.replace(/\u2424/g, '\n');
+		//.replace(/^ +/, '');
 };
 
 /*
@@ -56,6 +56,7 @@ Editor.prototype.preprocessor = function() {
 Editor.prototype.doInline = function() {
 	this.doEmphasis();
 	this.doAnchors();
+	this.doInlineCode();
 };
 
 Editor.prototype.doEmphasis = function() {
@@ -72,6 +73,10 @@ Editor.prototype.doAnchors = function() {
 		.replace(/\[([\S ]+?)\]\(([^ ]+?) "([\S ]+?)"\)/, '<a href="$2" title="$3">$1</a>');
 };
 
+Editor.prototype.doInlineCode = function() {
+	this.src = this.src.replace(/`(.+?)`/g, '<code>$1</code>');
+};
+
 /*
  *
  *	Block elements
@@ -82,7 +87,7 @@ Editor.prototype.doBlock = function() {
 	this.doHeaders();
 
 	var lines = this.src.split('\n'),
-		numberOfLines,
+		j,
 		structuredText = "";
 
 	for (var i = 0, numberOfLines = lines.length; i < numberOfLines; ) {
@@ -95,25 +100,56 @@ Editor.prototype.doBlock = function() {
 			while (i < numberOfLines && /^>/.test(lines[i])) {
 				structuredText += lines[i++].replace(/^>\s*/, '') + ' ';
 			}
-			structuredText += '</blockquote';
+			structuredText += '</blockquote>';
 
-		} else if (/^\d+[^\\]\./.test(lines[i])) {
+		} else if (/^\d+\./.test(lines[i])) {
 			// numbered list
+			structuredText += '<ol>';
+			while (i < numberOfLines && lines[i]) {
+				structuredText += '<li>' + lines[i++].replace(/^\d+\.\s*/, '');
+
+				// for multiple paragraphs
+				while(i < numberOfLines && lines[i] && !/^\d+\./.test(lines[i])) {
+					structuredText += lines[i++];
+				}
+				structuredText += '</li>';
+			}
+			structuredText += '</ol>';
+
+		} else if (/^\*[^\\]/.test(lines[i])) {
+			// bulleted list
 			structuredText += '<ul>';
-			while (i < numberOfLines && lines[i] !== "") {
-				structuredText += '<li>' + lines[i++] + '</li>';
+			while (i < numberOfLines && lines[i]) {
+				structuredText += '<li>' + lines[i++].replace(/^\*\s*/, '');
+
+				// for multiple paragraphs
+				while (i < numberOfLines && lines[i] && !/^\*[^\\]/.test(lines[i])) {
+					structuredText += lines[i++];
+				}
+				structuredText += '</li>';
 			}
 			structuredText += '</ul>';
 
+		} else if (/^ {4}/.test(lines[i])) {
+			// code block
+			structuredText += '<pre><code>';
+
+			while (i < numberOfLines && /^ {4}/.test(lines[i])) {
+				structuredText += lines[i++].replace(/^ {4}/, '');
+				if (i + 1 < numberOfLines && lines[i + 1]) structuredText += '\n\r';
+			}
+
+			structuredText += '</pre></code>';
+
 		} else if (!/<h[1-3]>/.test(lines[i])) {
 			// paragraphs
-			structuredText += '<p>';
-			while (i < numberOfLines && lines[i] !== "") {
-				structuredText += lines[i++];
-				if (i + 1 < numberOfLines && lines[i+1] !== "") {structuredText += " ";}
-			}
-			structuredText += '</p>';
-		} else {
+			j = i;
+			while (j + 1 < numberOfLines && lines[j + 1]) ++j;
+
+			structuredText += '<p>' + this.doParagraphs(lines, i, j) + '</p>';
+
+			i = j + 1;
+		}  else {
 			// header
 			structuredText += lines[i++];
 		}
@@ -122,14 +158,23 @@ Editor.prototype.doBlock = function() {
 	this.src = structuredText;
 };
 
-Editor.prototype.doParagraphs = function(string) {
+Editor.prototype.doParagraphs = function(stringArray, begin, end) {
+	var sol = "";
+
+	while (begin < end) {
+		sol += stringArray[begin++] + " ";
+	}
+
+	sol += stringArray[end];
+
+	return sol;
 };
 
 Editor.prototype.doHeaders = function() {
 	this.src = this.src
-		.replace(/#{3}([\S ]+?)[#{3}|\n]/g, '<h3>$1</h3>')
-		.replace(/#{2}([\S ]+?)[#{2}|\n]/g, '<h2>$1</h2>')
-		.replace(/#([\S ]+?)[#|\n]/g, '<h1>$1</h1>');
+		.replace(/#{3} *([\S\d ]+) *[#{3}|\n]/g, '<h3>$1</h3>')
+		.replace(/#{2} *([\S\d ]+) *[#{2}|\n]/g, '<h2>$1</h2>')
+		.replace(/# *([\S\d ]+) *[#|\n]/g, '<h1>$1</h1>');
 };
 
 /*

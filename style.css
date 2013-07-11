@@ -13,3 +13,8 @@ html, body {
 	min-height: 50%;
 	border: 1px red dotted;
 }
+
+code {
+	font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
+	background-color: rgb(238, 238, 238);
+}
