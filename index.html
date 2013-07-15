@@ -4,9 +4,19 @@
     <meta charset="utf-8">
     <title>A Markdown-Editor</title>
     <link rel="stylesheet" href="style.css">
+    <script src="markdownparser.js"></script>
     <script src="editor.js"></script>
   </head>
   <body>
+    <div class="bottons">
+      <img src="icons/link.png" alt="add anchor" id="add_anchor_button" class="icon">
+      <img src="icons/bold.png" alt="bold" id="add_bold_button" class="icon">
+      <img src="icons/italic.png" alt="italic" id="add_italics_button" class="icon">
+      <img src="icons/quote.png" alt="quote" id="add_quote_button" class="icon">
+      <img src="icons/enumerate.png" alt="enumerate" id="add_enumerate_button" class="icon">
+      <img src="icons/itemize.png" alt="itemize" id="add_itemize_button" class="icon">
+      <img src="icons/code.png" alt="code" id="add_code_button" class="icon">
+    </div>
     <textarea id="write" autofocus="autofocus" wrap="soft">
 #Paragraphs, Headers, Blockquotes
 
@@ -14,12 +24,9 @@
 
 ##A Second Level Header
 
-Now is the time for all good men to come to
-the aid of their country. This is just a
-regular paragraph.
+Now is the time for all good men to come to the aid of their country. This is just a regular paragraph.
 
-The quick brown fox jumped over the lazy
-dog's back.
+The quick brown fox jumped over the lazy dog's back.
 
 ### Header 3
 

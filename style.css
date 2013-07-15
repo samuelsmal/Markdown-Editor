@@ -18,3 +18,16 @@ code {
 	font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
 	background-color: rgb(238, 238, 238);
 }
+
+.buttons {
+	display: block;
+}
+
+
+.icon {
+	width: 25px;
+}
+
+.icon:hover {
+	background-color: rgb(238, 238, 238);
+};

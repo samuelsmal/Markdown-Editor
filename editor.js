@@ -8,173 +8,160 @@
 *
 */
 
-function Editor (parameters) {
+// TODO: Make preview as big as editor. If overlapping display at bottom of editor.
+
+var Editor = function (parameters) {
 	this.sourceField = document.getElementById(parameters['sourceField']);
 	this.target = document.getElementById(parameters['target']);
-
-	this.src = "";
-
 	this.time_since_keyDown = 0;
+
+	this.parser = new MarkdownParser();
 }
 
 Editor.prototype.updatePreview = function() {
-	this.src = this.sourceField.value;
-
-	this.preprocessor();
-
-	this.doInline();
-	this.doBlock();
-
-	this.target.innerHTML = this.src;
+	this.target.innerHTML = this.parser.parse(this.sourceField.value);
 	console.clear();
-	console.log(this.src);
 };
 
 /*
  *
- *	Preprocessor.
- *	Removes uncessary bits and homogenizes the input.
+ *	Helper functions
  *
  */
 
-Editor.prototype.preprocessor = function() {
-	this.src = this.src
-		.replace(/\r\n|\r/g, '\n')
-		.replace(/\t/g, '    ')
-		.replace(/\u00a0/g, ' ')
-		.replace(/\u2424/g, '\n');
-		//.replace(/^ +/, '');
+Editor.prototype.insertAtCaret = function(value) {
+	//IE support
+	if (document.selection) {
+		this.sourceField.focus();
+		sel = document.selection.createRange();
+		sel.text = value;
+		this.sourceField.focus();
+	}
+	//MOZILLA/NETSCAPE support
+	else if (this.sourceField.selectionStart || this.sourceField.selectionStart == '0') {
+		var startPos = this.sourceField.selectionStart,
+			endPos = this.sourceField.selectionEnd,
+			scrollTop = this.sourceField.scrollTop,
+			first = this.sourceField.value.substring(0, startPos),
+			second = this.sourceField.value.substring(endPos, this.sourceField.value.lenght);
+		this.sourceField.value = first + value + second;
+		this.sourceField.srollTop = scrollTop;
+	} else {
+		this.sourceField.value += value;
+		this.sourceField.focus();
+	}
+};
+
+Editor.prototype.getSelection = function() {
+	var selectedText;
+	// IE version
+	if (document.selection !== undefined)
+	{
+		this.sourceField.focus();
+		return document.selection.createRange().text;
+	}
+	// Mozilla version
+	else if (this.sourceField.selectionStart !== undefined)
+	{
+		var startPos = this.sourceField.selectionStart;
+		var endPos = this.sourceField.selectionEnd;
+		return this.sourceField.value.substring(startPos, endPos);
+	}
 };
 
 /*
  *
- *	Inline elements
+ *	UI functions
  *
  */
 
 
-Editor.prototype.doInline = function() {
-	this.doEmphasis();
-	this.doAnchors();
-	this.doInlineCode();
-};
+// FIX: add_anchor
+Editor.prototype.add_anchor = function() {
+	var ret_val = prompt("Enter an address:", "http://... title"),
+		raw = ret_val.split(" "),
+		href = (raw.length > 0) ? raw[0] : 'http://...',
+		title = (raw.length > 1) ? raw[1] : 'title';
 
-Editor.prototype.doEmphasis = function() {
-	this.src = this.src
-		.replace(/\*{2}(.+?)\*{2}/g, "<strong>$1</strong>")
-		.replace(/\*(.+?)\*/g, "<em>$1</em>")
-		.replace(/_{2}(.+?)_{2}/g, "<strong>$1</strong>")
-		.replace(/_(.+?)_/g, "<em>$1</em>");
-};
-
-Editor.prototype.doAnchors = function() {
-	this.src = this.src
-		.replace(/\[([\S ]+?)\]\(([^ ]+?)\)/, '<a href="$2">$1</a>')
-		.replace(/\[([\S ]+?)\]\(([^ ]+?) "([\S ]+?)"\)/, '<a href="$2" title="$3">$1</a>');
-};
-
-Editor.prototype.doInlineCode = function() {
-	this.src = this.src.replace(/`(.+?)`/g, '<code>$1</code>');
-};
-
-/*
- *
- *	Block elements
- *
- */
-
-Editor.prototype.doBlock = function() {
-	this.doHeaders();
-
-	var lines = this.src.split('\n'),
-		j,
-		structuredText = "";
-
-	for (var i = 0, numberOfLines = lines.length; i < numberOfLines; ) {
-
-		if (lines[i] === "") {
-			++i;
-		} else if (/^>/.test(lines[i])) {
-			// blockquote
-			structuredText += '<blockquote>';
-			while (i < numberOfLines && /^>/.test(lines[i])) {
-				structuredText += lines[i++].replace(/^>\s*/, '') + ' ';
-			}
-			structuredText += '</blockquote>';
-
-		} else if (/^\d+\./.test(lines[i])) {
-			// numbered list
-			structuredText += '<ol>';
-			while (i < numberOfLines && lines[i]) {
-				structuredText += '<li>' + lines[i++].replace(/^\d+\.\s*/, '');
-
-				// for multiple paragraphs
-				while(i < numberOfLines && lines[i] && !/^\d+\./.test(lines[i])) {
-					structuredText += lines[i++];
-				}
-				structuredText += '</li>';
-			}
-			structuredText += '</ol>';
-
-		} else if (/^\*[^\\]/.test(lines[i])) {
-			// bulleted list
-			structuredText += '<ul>';
-			while (i < numberOfLines && lines[i]) {
-				structuredText += '<li>' + lines[i++].replace(/^\*\s*/, '');
-
-				// for multiple paragraphs
-				while (i < numberOfLines && lines[i] && !/^\*[^\\]/.test(lines[i])) {
-					structuredText += lines[i++];
-				}
-				structuredText += '</li>';
-			}
-			structuredText += '</ul>';
-
-		} else if (/^ {4}/.test(lines[i])) {
-			// code block
-			structuredText += '<pre><code>';
-
-			while (i < numberOfLines && /^ {4}/.test(lines[i])) {
-				structuredText += lines[i++].replace(/^ {4}/, '');
-				if (i + 1 < numberOfLines && lines[i + 1]) structuredText += '\n\r';
-			}
-
-			structuredText += '</pre></code>';
-
-		} else if (!/<h[1-3]>/.test(lines[i])) {
-			// paragraphs
-			j = i;
-			while (j + 1 < numberOfLines && lines[j + 1]) ++j;
-
-			structuredText += '<p>' + this.doParagraphs(lines, i, j) + '</p>';
-
-			i = j + 1;
-		}  else {
-			// header
-			structuredText += lines[i++];
-		}
+	for (var i = 2; i < raw.length; ++i) {
+		title += ' ' + raw[i];
 	}
 
-	this.src = structuredText;
+	this.insertAtCaret('[' + title + '](' + href + ')');
+	this.updatePreview();
 };
 
-Editor.prototype.doParagraphs = function(stringArray, begin, end) {
-	var sol = "";
+Editor.prototype.add_italics = function() {
+	var userSelection = this.getSelection();
 
-	while (begin < end) {
-		sol += stringArray[begin++] + " ";
+	if (userSelection) {
+		this.insertAtCaret('*' + this.getSelection() + '*');
+	} else {
+		this.insertAtCaret('*italics*');
 	}
 
-	sol += stringArray[end];
-
-	return sol;
+	this.updatePreview();
 };
 
-Editor.prototype.doHeaders = function() {
-	this.src = this.src
-		.replace(/#{3} *([\S\d ]+) *[#{3}|\n]/g, '<h3>$1</h3>')
-		.replace(/#{2} *([\S\d ]+) *[#{2}|\n]/g, '<h2>$1</h2>')
-		.replace(/# *([\S\d ]+) *[#|\n]/g, '<h1>$1</h1>');
+Editor.prototype.add_bold = function() {
+	var userSelection = this.getSelection();
+
+	if (userSelection) {
+		this.insertAtCaret('**' + this.getSelection() + '**');
+	} else {
+		this.insertAtCaret('**bold**');
+	}
+
+	this.updatePreview();
+};
+
+// TODO: Needs to be able to handle multiline support.
+Editor.prototype.add_quote = function() {
+	var userSelection = this.getSelection();
+
+	if (userSelection) {
+		this.insertAtCaret('> ' + this.getSelection());
+	} else {
+		this.insertAtCaret('> Blockquote');
+	}
+
+	this.updatePreview();
+};
+
+Editor.prototype.add_enumerate = function() {
+	var userSelection = this.getSelection();
+
+	if (userSelection) {
+		this.insertAtCaret('1. ' + this.getSelection());
+	} else {
+		this.insertAtCaret('1. \n2. ');
+	}
+
+	this.updatePreview();
+};
+
+Editor.prototype.add_itemize = function() {
+	var userSelection = this.getSelection();
+
+	if (userSelection) {
+		this.insertAtCaret('* ' + this.getSelection());
+	} else {
+		this.insertAtCaret('* \n* ');
+	}
+
+	this.updatePreview();
+};
+
+Editor.prototype.add_code = function() {
+	var userSelection = this.getSelection();
+
+	if (userSelection) {
+		this.insertAtCaret('    ' + this.getSelection());
+	} else {
+		this.insertAtCaret('     Code');
+	}
+
+	this.updatePreview();
 };
 
 /*
@@ -190,18 +177,44 @@ function setup() {
     editor.updatePreview();
 
     // The callMethod function is necessary, since setTimeout calls a function in the global scope.
-    var callMethod = function () {
+    var callPreview = function () {
         editor.updatePreview();
     };
 
     window.onkeydown = function () {
         if (editor.time_since_keyDown) {
             clearTimeout(editor.time_since_keyDown);
-            editor.time_since_keyDown = setTimeout(callMethod, 1000);
+            editor.time_since_keyDown = setTimeout(callPreview, 1000);
         } else {
-            editor.time_since_keyDown = setTimeout(callMethod, 1000);
+            editor.time_since_keyDown = setTimeout(callPreview, 1000);
         }
     };
+
+    // TODO: Add refocus.
+    var callAnchor = function () {
+		editor.add_anchor();
+    },	callItalics = function () {
+		editor.add_italics();
+    },	callBold = function () {
+    	editor.add_bold();
+    },	callQuote = function () {
+    	editor.add_quote();
+    },	callEnumerate = function () {
+    	editor.add_enumerate();
+    },	callItemize = function () {
+    	editor.add_itemize();
+    },	callCode = function () {
+    	editor.add_code();
+    };
+
+    document.getElementById('add_anchor_button').addEventListener('click', callAnchor, false);
+    document.getElementById('add_italics_button').addEventListener('click', callItalics, false);
+    document.getElementById('add_bold_button').addEventListener('click', callBold, false);
+    document.getElementById('add_quote_button').addEventListener('click', callQuote, false);
+    document.getElementById('add_enumerate_button').addEventListener('click', callEnumerate, false);
+    document.getElementById('add_itemize_button').addEventListener('click', callItemize, false);
+    document.getElementById('add_code_button').addEventListener('click', callCode, false);
+
 }
 
 window.onload = setup;
