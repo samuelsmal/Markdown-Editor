@@ -10,17 +10,31 @@
 
 // TODO: Make preview as big as editor. If overlapping display at bottom of editor.
 
-var Editor = function (parameters) {
+function Editor (parameters) {
 	this.sourceField = document.getElementById(parameters['sourceField']);
 	this.target = document.getElementById(parameters['target']);
 	this.time_since_keyDown = 0;
 
 	this.parser = new MarkdownParser();
+
+	var self = this;
+	this.anchorPopup = new Popup(function(data) {self.add_anchor(data);});
 }
 
 Editor.prototype.updatePreview = function() {
 	this.target.innerHTML = this.parser.parse(this.sourceField.value);
-	console.clear();
+	// console.clear();
+};
+
+Editor.prototype.adjustPreview = function() {
+	if (this.sourceField.offsetWidth >= window.innerWidth / 2) {
+		this.target.style.clear = 'both';
+		this.target.style.width = this.sourceField.offsetWidth + 'px';
+	} else {
+		this.target.style.float = 'left';
+		this.target.style.width = (window.innerWidth - this.sourceField.offsetWidth - 10) + 'px';
+		this.target.style.height = this.sourceField.offsetHeight + 'px';
+	}
 };
 
 /*
@@ -77,17 +91,8 @@ Editor.prototype.getSelection = function() {
 
 
 // FIX: add_anchor
-Editor.prototype.add_anchor = function() {
-	var ret_val = prompt("Enter an address:", "http://... title"),
-		raw = ret_val.split(" "),
-		href = (raw.length > 0) ? raw[0] : 'http://...',
-		title = (raw.length > 1) ? raw[1] : 'title';
-
-	for (var i = 2; i < raw.length; ++i) {
-		title += ' ' + raw[i];
-	}
-
-	this.insertAtCaret('[' + title + '](' + href + ')');
+Editor.prototype.add_anchor = function(data) {
+	this.insertAtCaret('[' + data.title + '](' + data.href + ')');
 	this.updatePreview();
 };
 
@@ -175,46 +180,58 @@ function setup() {
     var editor = new Editor(parameters);
 
     editor.updatePreview();
-
-    // The callMethod function is necessary, since setTimeout calls a function in the global scope.
-    var callPreview = function () {
-        editor.updatePreview();
-    };
-
-    window.onkeydown = function () {
-        if (editor.time_since_keyDown) {
-            clearTimeout(editor.time_since_keyDown);
-            editor.time_since_keyDown = setTimeout(callPreview, 1000);
-        } else {
-            editor.time_since_keyDown = setTimeout(callPreview, 1000);
-        }
-    };
+    editor.adjustPreview();
 
     // TODO: Add refocus.
-    var callAnchor = function () {
-		editor.add_anchor();
-    },	callItalics = function () {
-		editor.add_italics();
-    },	callBold = function () {
+
+
+    addEvent(window, 'keydown', function () {
+        if (editor.time_since_keyDown) {
+            clearTimeout(editor.time_since_keyDown);
+            editor.time_since_keyDown = setTimeout(function () {
+				editor.updatePreview();
+			}, 1000);
+        } else {
+            editor.time_since_keyDown = setTimeout(function () {
+				editor.updatePreview();
+			}, 1000);
+        }
+    });
+
+    addEvent(document.getElementById('add_anchor_button'), 'click', function () {
+    	editor.anchorPopup.toggleDisplay();
+    	// editor.add_anchor();
+    });
+    addEvent(document.getElementById('add_italics_button'), 'click', function () {
+    	editor.add_italics();
+    });
+    addEvent(document.getElementById('add_bold_button'), 'click', function () {
     	editor.add_bold();
-    },	callQuote = function () {
+    });
+    addEvent(document.getElementById('add_quote_button'), 'click', function () {
     	editor.add_quote();
-    },	callEnumerate = function () {
+    });
+    addEvent(document.getElementById('add_enumerate_button'), 'click', function () {
     	editor.add_enumerate();
-    },	callItemize = function () {
+    });
+    addEvent(document.getElementById('add_itemize_button'), 'click', function () {
     	editor.add_itemize();
-    },	callCode = function () {
+    });
+    addEvent(document.getElementById('add_code_button'), 'click', function () {
     	editor.add_code();
-    };
+    });
 
-    document.getElementById('add_anchor_button').addEventListener('click', callAnchor, false);
-    document.getElementById('add_italics_button').addEventListener('click', callItalics, false);
-    document.getElementById('add_bold_button').addEventListener('click', callBold, false);
-    document.getElementById('add_quote_button').addEventListener('click', callQuote, false);
-    document.getElementById('add_enumerate_button').addEventListener('click', callEnumerate, false);
-    document.getElementById('add_itemize_button').addEventListener('click', callItemize, false);
-    document.getElementById('add_code_button').addEventListener('click', callCode, false);
-
+    // Expensive...
+    addEvent(editor.sourceField, 'mousemove', function () {
+    	editor.adjustPreview();
+    });
 }
 
-window.onload = setup;
+function addEvent(element, event, fn) {
+	if (element.addEventListener)
+		element.addEventListener(event, fn, false);
+	else if (element.attachEvent)
+		element.attachEvent('on' + event, fn);
+}
+
+addEvent(window, 'load', setup);
